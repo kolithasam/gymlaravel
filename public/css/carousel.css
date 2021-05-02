@@ -1,0 +1,24 @@
+.carousel {
+    position: relative;
+  }
+  
+  .carousel-caption {
+    position: absolute;
+    background: rgba(0,0,0,0.4);
+    padding: 15px 10px;
+  }
+  
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 5%;
+  }
+
+
+  .hero
+  {
+
+height: 1000%;
+width: 1000%;
+background:image("/Images/elliot-l-angelier-4pq3qiOIET8-unsplash.jpg");
+
+  }
