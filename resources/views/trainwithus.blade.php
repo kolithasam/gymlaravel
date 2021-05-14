@@ -5,11 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Train With Us</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
 
     <style>
         .service-item {
@@ -67,11 +73,39 @@
         p {
             text-align: center;
         }
+
+        .hcc {
+
+
+            background: url("/Images/");
+        }
+
+
+
+        .body {
+
+            background-color: re;
+
+        }
     </style>
 
 </head>
 
 <body>
+
+
+
+    <div class="">
+
+        @extends('navi')
+        @section('content')
+
+    </div>
+
+    @endsection
+
+
+
 
 
 
@@ -115,6 +149,12 @@
 
     </main>
 
+    <br><br><br>
+
+
+    <center><button class="btn more" id="button" style="vertical-align:middle"><a href="clientprofile" style="color: white;">My Profile</a></button></center>
+    <br><br>
+
     <div class="container">
         <div class="text-center">
 
@@ -122,59 +162,75 @@
                 <div class="col-md-12">
 
 
-
-    <table class="table table-striped">
-                        <th><h4><b>Image</b></h4></th>
-                        <th><center> <h4><b>Name</b></h4></center></th>
-                        <th><center> <h4><b>Hire</b></h4></center></th>
-                        
-
-
-        @foreach( $data as $i)
-
-        <tr>
-            <td>
-            <figure>
-                    <img class="img-responsive full-width" src="/images/{{$i ->c_image}}" alt="Top workouts" style="height:160px " width="100px" />
-                </figure>
-            </td>
-
-            <td>
-
-
-            <h4>{{$i->first_name}}</h4>
-
-            </td>
-
-<td>
+                    <table class="table table-striped">
+                        <th style="background: #1A908F;">
+                            <h3 style="color: white;">IMAGE</h3>
+                        </th>
+                        <th style="background: #1A908F;">
+                            <center>
+                                <h3 style="color: white;">Email</h3>
+                            </center>
+                        </th>
+                        <th style="background: #1A908F;">
+                            <center>
+                                <h3 style="color: white;">HIRE</h3>
+                            </center>
+                        </th>
 
 
 
-<center><button class="btn more" id="button" style="vertical-align:middle"><span href="">Hire</span></button></center>
-</td>
+                        @foreach( $data as $i)
+
+                        <tr>
+                            <td>
+                                <center>
+                                    <figure>
+                                        <img class="img-responsive full-width" src="/images/{{$i ->c_image}}" alt="Top workouts" style="height:160px " width="100px" />
+                                    </figure>
+                                </center>
+
+                            </td>
+
+                            <td>
+
+
+                                <h4>{{$i->email}}</h4>
+
+
+                            </td>
+
+                            <td>
 
 
 
-        
-        </tr>
-      
+                                <center><button class="btn more" id="button" style="vertical-align:middle"><a href="hire/{{$i->email}}">Hire</a></button></center>
 
 
-            
-           
-    
 
-        @endforeach
-  
+                            </td>
 
 
-    </table>
+
+
+                        </tr>
+
+
+
+
+
+
+
+                        @endforeach
+
+
+
+                    </table>
                 </div>
             </div>
 
         </div>
     </div>
-    
+
 
 
 </body>

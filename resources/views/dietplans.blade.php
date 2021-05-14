@@ -10,6 +10,22 @@
     <title>User</title>
 
 <style> 
+
+
+   .box{
+    width:600px;
+    margin:0 auto;
+    border:1px solid #ccc;
+   }
+   .has-error
+   {
+    border-color:#cc0000;
+    background-color:#ffff99;
+   }
+
+
+
+
 .service-item{
 
 
@@ -59,7 +75,16 @@ text-align: center;
 }
 p{
 text-align: center;
-}</style>
+}
+
+#drop{
+
+width:300px ;
+
+}
+
+
+</style>
 
 
 
@@ -96,50 +121,65 @@ text-align: center;
     <div class="container box">
 <h1>Fill This Form</h1> <br><hr><br><br><br>
 
-<div id="error">
-</div>
+
 <form action="dietplans" method="post"  enctype="multipart/form-data">
 @csrf
-<label > Name :- </label>
-<input id="name" type="text" name="name" placeholder="Enter Name"  required> <br><br>
 
-<label >Email &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; :- </label>
-<input id="email" type="email" name="email" placeholder="Enter email" required> <br><br>
+&nbsp;&nbsp;
 
-<label > Mobile  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:-</label>
-<input id="phone"   type="text" name="phone" placeholder="Enter Phone Number" required> <br><br>
+
+
 <div class="form-group">
-        <label>Gender:</label>
-        <select class="form-control" name="category" id="category" required>
+<label > Name &nbsp;:- </label>
+<input id="name" type="text" name="name" placeholder="Enter Name"  required> <br><br></div>
+
+<div class="form-group">
+<label >Email&nbsp;  :- </label>
+<input id="email" type="email" name="email" placeholder="Enter email" required></div> <br>
+
+<div class="form-group">
+<label > Mobile  :-</label>
+<input id="phone"   type="text" name="phone" placeholder="Enter Phone Number" required> </div><br><br>
+
+
+
+        <label>Gender:</label><br>
+        <br>
+        <select class="form-control" name="category" id="drop" required>
           <option value="male">Male</option>
           <option value="female">Female</option>
-         
-        
         </select>
-      </div>
+<br><br>
+      <div class="form-group">
 <label > Your Body Weight :- </label>
-<input id="weight" type="text" name="weight" placeholder="Enter weight"  required> <br><br>
-<label > Your Height :- </label>
-<input id="name" type="text" name="height" placeholder="Enter height"  required> <br><br>
+<input id="weight" type="text" name="weight" placeholder="Enter weight"  required> </div><br><br>
 
+<div class="form-group">
+<label > Your Height :- </label>
+<input id="name" type="text" name="height" placeholder="Enter height"  required> </div><br><br>
+
+<div class="form-group">
 <h4>Enter Your Body Goals</h4>
 
 <div class="form-group">
        
         <textarea type="text" name="note" rows="4" cols="50" required>
 
- </textarea><br><br><br>
+ </textarea></div><br><br><br>
+
+ <div class="form-group">
  <h4>Enter Your Address</h4>
 
-<div class="form-group">
+
        
         <textarea type="text" name="address" rows="4" cols="50" required>
 
- </textarea><br><br><br>
+ </textarea>
+ </div><br><br><br>
  
- <div class="form-group">
+ <div class="form-group" >
         <label>Payment Method:</label>
-        <select class="form-control" name="payment" id="payment" required>
+        <select class="form-control" name="payment" id="drop" required>
           <option value=" on delivery">Cash On Delivery</option>
          
         
@@ -160,6 +200,8 @@ text-align: center;
 </center>
 
 
+
+
 <br><br><br><br><br><br>
     
     <footer>
@@ -171,63 +213,9 @@ text-align: center;
 
     
 
-    <script>
-    
-    const name = document.getElementById('name')
-    const last = document.getElementById('last')
-    const email = document.getElementById('email')
-    const phone = document.getElementById('phone')
-    const error = document.getElementById('error')
-    const password = document.getElementById('password')
-
-
-    from.addEventListener('submit',(e)=> {
-     
-      let messages =[]
-      if(name.value ===''||name.value ==null) {
-
-     messages.push('Name is required')
-
-      }
-
-       if(password.value.length  <=5)
-       {
-
-        messages.push('Password must be longer than 5 characters')
-
-
-       }
-
-
-       if(password.value.length  >= 25)
-       {
-
-        messages.push('Password must be less than 25 characters')
-
-
-       }
-    
-
-
-
-
-      if(messages.length > 0)
-
-      {
-         e.preventDefault()
-         errorElement.innerText = message.join(',')
-
-
-
-      }
-
-
-
-
-    })
-    </script>
 
 
 </body>
 
 </html>
+

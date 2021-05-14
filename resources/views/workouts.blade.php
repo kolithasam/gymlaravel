@@ -4,12 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proteins</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <title>Workouts</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
 
     <style>
         .service-item {
@@ -72,6 +74,14 @@
 </head>
 
 <body>
+    <div class="">
+
+        @extends('navi')
+        @section('content')
+
+    </div>
+
+    @endsection
 
 
 
@@ -121,8 +131,8 @@
 
             <div class="row">
                 <div class="col-md-12">
-             
-             
+
+
 
 
 
@@ -135,72 +145,91 @@
                     <center> <img src="/Images/chris.jpg" title="Store" alt="Store" style="height: 650px;" width="700px" class="img-responsive" /></center>
 
 
-<br><br><br><br><br><br><br>
+                    <br><br><br><br><br><br><br>
 
 
 
-<table class="table table-striped">
+                    <table class="table table-striped">
 
 
-<th><center><h2>Image</h2></center></th>                       
-<th><center><h2>Name</h2></center></th>
-<th><center><h2>Date</h2></center></th>
-<th><center><h2>Description</h2></center></th>
-<th><center><h2>View</h2></center></th>
+                        <th style="background: #1A908F;">
+                            <h3 style="color: white;">IMAGE</h3>
+                        </th>
+                        <th style="background: #1A908F;">
+                            <center>
+                                <h3 style="color: white;">NAME</h3>
+                            </center>
+                        </th>
+                        <th style="background: #1A908F;">
+                            <center>
+                                <h3 style="color: white;">DATE</h3>
+                            </center>
+                        </th>
+                        <th style="background: #1A908F;">
+                            <center>
+                                <h3 style="color: white;">VIEW</h3>
+                            </center>
+                        </th>
 
 
-@foreach($data as $i)
+                        @foreach($data as $i)
 
-<tr>
-
-
-
-<td> <figure>
-                                        <img class="img-responsive full-width" src="/images/{{$i->image}}" alt="Top workouts" style="height:160px " width="100px" />
-                                    </figure></td>
-
-
-<td> {{$i->name}}</td>
-
-
-<td> {{$i->date}}   </td>
-<td> {{$i->note}}   </td>
-
-
-<td>    <center><button class="btn more" id="button" style="vertical-align:middle"><a href="workoutview/{{$i->w_id}}" style="color: gainsboro;">Read</a></button></center>    </td>
-
-
-@endforeach
+                        <tr>
 
 
 
+                            <td>
+                                <center>
+                                    <figure>
+                                        <img class="img-responsive full-width" src="/images/{{$i->image}}" alt="Top workouts" style="height:160px " width="200px" />
+                                    </figure>
+                                </center>
+                            </td>
 
 
-</tr>
-
-</table>
-{{ $data->links() }}
+                            <td> {{$i->name}}</td>
 
 
-</div>
-</div>
-</div>
-</div>
+                            <td> {{$i->date}} </td>
 
 
-<div>
 
-<footer>
-        
-        @extends('footer')
-  @section('content')
-        
+                            <td>
+                                <center><button class="btn more" id="button" style="vertical-align:middle"><a href="workoutview/{{$i->w_id}}" style="color: gainsboro;">Read</a></button></center>
+                            </td>
+
+
+                            @endforeach
+
+
+
+
+
+                        </tr>
+
+                    </table>
+                    {{ $data->links() }}
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div>
+
+        <footer>
+
+            @extends('footer')
+            @section('content')
+
         </footer>
 
 
 
 
-</div>
+    </div>
 
 
 

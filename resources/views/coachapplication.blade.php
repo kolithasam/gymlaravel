@@ -59,7 +59,17 @@ text-align: center;
 }
 p{
 text-align: center;
-}</style>
+}
+#role{
+
+width:200px ;
+
+}
+
+
+
+
+</style>
 
 
 
@@ -109,6 +119,14 @@ text-align: center;
 
 <label >Email &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; :- </label>
 <input id="email" type="email" name="email" placeholder="Enter email" required> <br><br>
+
+<div class="form-group">
+        <label>Category:</label>
+        <select class="form-control" name="role" id="role" required>
+          <option value="COACH">COACH</option>
+         
+        </select>
+      </div>
 
 <label > Mobile  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:-</label>
 <input id="phone"   type="text" name="phone" placeholder="Enter Phone Number" required> <br><br>

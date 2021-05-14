@@ -3,13 +3,13 @@
 
 <head>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
 
     <style>
         .service-item {
@@ -73,14 +73,14 @@
 
 <body>
 
-<div class="">
+    <div class="">
 
-@extends('navi')
-  @section('content')
+        @extends('navi')
+        @section('content')
 
-</div>
+    </div>
 
-@endsection
+    @endsection
 
 
 
@@ -133,15 +133,20 @@
 
             <div class="row">
                 <div class="col-md-12">
-<br><br><br><br><br><br><br>
+                    <br><br><br><br><br><br><br>
 
-              
 
                     <table class="table table-striped">
-                        <th>Image</th>
-                        <th> Name</th>
-                        <th>Note</th>
-                        <th>View</th>
+                        <th style="background: #1A908F;">
+                            <h3 style="color: white;">IMAGE</h3>
+                        </th>
+                        <th style="background: #1A908F;">
+                            <h3 style="color: white;">NAME</h3>
+                        </th>
+
+                        <th style="background: #1A908F;">
+                            <h3 style="color: white;">VIEW</h3>
+                        </th>
 
 
 
@@ -152,34 +157,35 @@
 
 
 
-@foreach($data as $kit)
-<tr>
-                                <td>
+                        @foreach($data as $kit)
+                        <tr>
+                            <td>
 
 
-
-<figure>
-                                        <img class="img-responsive full-width" src="/images/{{$kit->kit_image}}" alt="Top workouts" style="height:160px " width="100px" />
+                                <center>
+                                    <figure>
+                                        <img class="img-responsive full-width" src="/images/{{$kit->kit_image}}" alt="Top workouts" style="height:190px " width="200px" />
                                     </figure>
+                                </center>
 
 
-                                    </td>
-                                <td>
+                            </td>
+                            <td>
 
-<h4>{{$kit->name}}</h4>
-</td>
-<td>
-<h4>{{$kit->note}}</h4>
-</td>
-
-<td><center><button class="btn more" id="button" style="vertical-align:middle"><a href="" style="color: gainsboro;">View More</a></button></center></td>
-      </tr>
+                                <h4>{{$kit->name}}</h4>
+                            </td>
 
 
+                            <td>
+                                <center><button class="btn more" id="button" style="vertical-align:middle"><a href="kitchenview/{{$kit->id_k}}" style="color: gainsboro;">Read</a></button></center>
+                            </td>
+                        </tr>
 
-@endforeach
 
-</table>
+
+                        @endforeach
+
+                    </table>
 
 
                 </div>
@@ -191,17 +197,17 @@
 
     <div>
 
-<footer>
-        
-        @extends('footer')
-  @section('content')
-        
+        <footer>
+
+            @extends('footer')
+            @section('content')
+
         </footer>
 
 
 
 
-</div>
+    </div>
 
 
 

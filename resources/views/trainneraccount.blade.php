@@ -16,16 +16,16 @@
     <h2>Add Trainners</h2>
     @if ($errors->any())
     <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
+      <ul>
+        @foreach ($errors->all() as $error)
+        <li>{{ $error }}</li>
+        @endforeach
+      </ul>
     </div>
     @endif
     <form action="itemAds" method="post" enctype="multipart/form-data">
       @csrf
-      <input type="file" name="image" required/>
+      <input type="file" name="image" required />
 
 
       <div class="form-group">

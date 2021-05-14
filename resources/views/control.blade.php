@@ -218,6 +218,8 @@
                     <ul id="submenu-1" class="collapse">
                         <li><a href="/itemAds"><i class="fa fa-angle-double-right"></i> ITEMS</a></li>
                         <li><a href="/itemedit"><i class="fa fa-angle-double-right"></i> DELETE ITEMS/UPDATE ITEMS</a></li>
+                        <li><a href="/storeorders"><i class="fa fa-angle-double-right"></i> STORE ORDERS</a></li>
+                       
                     
                        
                      
@@ -236,7 +238,7 @@
                 <li>
                     <a href="#" data-toggle="collapse" data-target="#submenu-3"><i class="fa fa-fw fa-user-plus"></i>  Users <i class="fa fa-fw fa-angle-down pull-right"></i></a>
                     <ul id="submenu-3" class="collapse">
-                        <li><a href="#"><i class="fa fa-angle-double-right"></i> Clients</a></li>
+                        <li><a href="/useredite"><i class="fa fa-angle-double-right"></i> Clients</a></li>
                    
                         <li><a href=" /addcoachpage"><i class="fa fa-angle-double-right"></i> Add Trainners table</a></li>
 
@@ -288,7 +290,8 @@
                 <li>
                     <a href="#" data-toggle="collapse" data-target="#submenu-6"><i class="fa fa-fw fa-paper-plane-o"></i>  Kitchen <i class="fa fa-fw fa-angle-down pull-right"></i></a>
                     <ul id="submenu-6" class="collapse">
-                        <li><a href="/"><i class="fa fa-angle-double-right"></i> Add Kitchen</a></li>
+                        <li><a href="/addkitchen"><i class="fa fa-angle-double-right"></i> Add Kitchen</a></li>
+                        <li><a href="/kitchenedit"><i class="fa fa-angle-double-right"></i> Delete kitchen</a></li>
                    
                         
 

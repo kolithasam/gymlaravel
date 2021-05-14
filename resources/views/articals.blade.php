@@ -4,12 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proteins</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Articals</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css">
+
 
     <style>
         .service-item {
@@ -73,6 +76,15 @@
 
 <body>
 
+@extends('navi')
+  @section('content')
+
+</div>
+
+@endsection
+
+
+
 
 
     <br>
@@ -135,10 +147,10 @@
 
 
                           
-                        <th><center><h2>Name</h2></center></th>
-                        <th><center><h2>Date</h2></center></th>
-                        <th><center><h2>Artical</h2></center></th>
-                        <th><center><h2>View</h2></center></th>
+                        <th style="background: #1A908F;"><center><h3 style="color: white;">Name</h3></center></th>
+                        <th style="background: #1A908F;"><center><h3 style="color: white;">DATE</h3></center></th>
+                  
+                        <th style="background: #1A908F;"><center><h3 style="color: white;">VIEW</h3></center></th>
                     
                       
 
@@ -162,12 +174,10 @@
                             <td>
                                 <h4>{{$a->date}}</h4>
                             </td>
-                            <td>
-                                <h4>{{$a->note}}</h4>
-                            </td>
+                          
                             <td> 
 
-                            <center><button class="btn more" id="button" style="vertical-align:middle">Read</button></center>
+                            <center><button class="btn more" id="button" style="vertical-align:middle"> <a href="articalview/{{$a->id_artical}}" style="color: gainsboro;">Read</a></button></center>
 
                             </td>
                             @endforeach

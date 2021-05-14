@@ -10,5 +10,6 @@ class store_items extends Model
     use HasFactory;
 
     protected $primaryKey = 'item_id';
+    protected $table = "store_items";
     public $timestamps=false;
 }

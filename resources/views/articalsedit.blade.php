@@ -43,7 +43,7 @@
 
 <td><a href="artical/delete/{{$item->id_artical}}" class="btn btn-success ">Delete</a></td>
 
-<td><a href="/edit/{{$item->id_artical}}" class="btn btn-success ">Update</a></td>
+
 
 
 

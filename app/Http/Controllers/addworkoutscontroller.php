@@ -13,6 +13,13 @@ class addworkoutscontroller extends Controller
   {
 
 
+    $request->validate([
+      'name' => 'required',
+      'date' => 'required',
+      'note' => 'required',
+      'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+    ]);
+
 
     $item = new addworkouts();
 
@@ -21,34 +28,26 @@ class addworkoutscontroller extends Controller
     $item->note = $request->note;
     $item->category_id = $request->category_id;
 
-    $imageName = time().'.'.$request->image->extension();
+    $imageName = time() . '.' . $request->image->extension();
     $request->image->move(public_path('images'), $imageName);
 
     $item->image = $imageName;
     $item->save();
-  //  return redirect('coachapplication');
+
 
     $item->save();
-    return "okay";
+    return redirect("addworkouts");
   }
 
 
-  //public function getchest(){
-  //   $items = addworkouts::where('category_id', 0)->paginate(10);
-  //  return view(' workouts')->with(' workouts',$items);
-  // }
 
-  // public function getshoulders(){
-  //   $items = addworkouts::where('category_id', 1)->paginate(10);
-  ////  return view(' workouts')->with(' workouts',$items);
-  //  }
 
 
   public function getchest()
   {
 
 
-    //  $data=addworkouts::all();
+
     $data = addworkouts::where('category_id', 0)->paginate(10);
     return view('workouts', ['data' => $data]);
   }
@@ -57,7 +56,7 @@ class addworkoutscontroller extends Controller
   {
 
 
-    // $data=addworkouts::all();
+
     $data = addworkouts::where('category_id', 1)->paginate(10);
     return view('workouts', ['data' => $data]);
   }
@@ -67,7 +66,7 @@ class addworkoutscontroller extends Controller
   {
 
 
-    // $data=addworkouts::all();
+
     $data = addworkouts::where('category_id', 2)->paginate(10);
     return view('workouts', ['data' => $data]);
   }
@@ -76,7 +75,6 @@ class addworkoutscontroller extends Controller
   {
 
 
-    // $data=addworkouts::all();
     $data = addworkouts::where('category_id', 3)->paginate(10);
     return view('workouts', ['data' => $data]);
   }
@@ -85,7 +83,7 @@ class addworkoutscontroller extends Controller
   {
 
 
-    // $data=addworkouts::all();
+
     $data = addworkouts::where('category_id', 4)->paginate(10);
     return view('workouts', ['data' => $data]);
   }
@@ -94,7 +92,6 @@ class addworkoutscontroller extends Controller
   {
 
 
-    // $data=addworkouts::all();
     $data = addworkouts::where('category_id', 5)->paginate(10);
     return view('workouts', ['data' => $data]);
   }
@@ -103,7 +100,7 @@ class addworkoutscontroller extends Controller
   {
 
 
-    // $data=addworkouts::all();
+
     $data = addworkouts::where('category_id', 6)->paginate(10);
     return view('workouts', ['data' => $data]);
   }
@@ -112,7 +109,7 @@ class addworkoutscontroller extends Controller
   {
 
 
-    // $data=addworkouts::all();
+
     $data = addworkouts::where('category_id', 7)->paginate(10);
     return view('workouts', ['data' => $data]);
   }
@@ -146,7 +143,7 @@ class addworkoutscontroller extends Controller
 
 
 
-  
+
   public function update(Request $request, $id)
   {
 
@@ -158,9 +155,4 @@ class addworkoutscontroller extends Controller
     $data->save();
     return "success";
   }
-
-
-
-
-
 }

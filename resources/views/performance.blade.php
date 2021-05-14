@@ -145,20 +145,20 @@
 
 
                         @foreach($items as $item)
-                            <tr>
-                                <td>
-                                    <figure>
-                                        <img class="img-responsive full-width" src="/images/{{$item->main_image}}" alt="Top workouts" style="height:160px " width="100px" />
-                                    </figure>
-                                </td>
-                                <td>
-                                    <h3>{{$item->name}}</h3>
-                                </td>
-                                <td>
-                                    <h3>{{$item->price}}</h3>
-                                    <center><button class="btn more" id="button" style="vertical-align:middle"><a href="/item/{{$item->item_id}}">View More</a></button></center>
-                                </td>
-                            </tr>
+                        <tr>
+                            <td>
+                                <figure>
+                                    <img class="img-responsive full-width" src="/images/{{$item->main_image}}" alt="Top workouts" style="height:160px " width="100px" />
+                                </figure>
+                            </td>
+                            <td>
+                                <h3>{{$item->name}}</h3>
+                            </td>
+                            <td>
+                                <h3>{{$item->price}}</h3>
+                                <center><button class="btn more" id="button" style="vertical-align:middle"><a href="/item/{{$item->item_id}}">View More</a></button></center>
+                            </td>
+                        </tr>
                         @endforeach
                     </table>
                     {{ $items->links() }}

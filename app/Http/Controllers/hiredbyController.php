@@ -1,27 +1,37 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
-use App\Models\hired_by;
+use App\Models\hired_bies;
 
 class hiredbyController extends Controller
 {
-    //
 
-    function addData(Request $req)
+
+    
+
+    public function hirecoaches($email)
     {
-        $users=new hired_by;
-        $users->client_email=$req->client_email;
-        $users->coach_email=$req->coach_email;
-        $users->start_date=$req->start_date;
-        $users->end_date=$req->end_date;
-     
-        $users->save();
-        return redirect('hiredby');
+      
 
-        
-
+         $users=new hired_bies;
+         $users->coach_email=$email;
+        $users->client_email=Auth::user()->email;
+              $users->save();
+            return view('clientprofile');
+      
 
     }
+
+   
+
+
+
+
+   
+
+    
+
+
 }

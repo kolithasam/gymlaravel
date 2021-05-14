@@ -118,34 +118,54 @@
   <br>
   <br>
   <br>
+  <center>
+                    <h1 style="color:#E0C11E;">My Profile</h1>
+                </center><br>
 
   <center>  <img src="/Images/profile.png" title="Store" alt="Store" style="height: 500px;" width="500px" class="img-responsive"/></center>
 
 
 
+<br><br><br><br>
 
 
-<center>
-
-
-<div class="container">
-
-
-
-  <div class="row">
+  <table class="table table-striped">
 
 
 
 
+<tr>
 
-   <div class="col-sm-3" > <center><button class="btn more" id="button" style="vertical-align:middle"><a href="/clientform" style="color: white;">Form</a></button></center></div>
-   <div class="col-sm-3" ></div>
-   <div class="col-sm-3" ></div>
-   <div class="col-sm-3" > <center><button class="btn more" id="button" style="vertical-align:middle"><a href="" style="color: white;">Mydetails</a></button></center></div>
 
-   
-  </div>
-</div>
+
+
+<td><center><button class="btn more" id="button" style="vertical-align:middle"><a href="/clientform" style="color: white;">Form</a></button></center> </td>
+
+
+<td>  <center><button class="btn more" id="button" style="vertical-align:middle"><a href="/clientprofiledetails" style="color: white;">Mydetails</a></button></center>  </td>
+
+
+
+<td>  <center><button class="btn more" id="button" style="vertical-align:middle"><a href="/clientchat" style="color: white;">Chat</a></button></center>  </td>
+  </td>
+
+
+
+
+
+</tr>
+
+</table>
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -173,5 +193,5 @@
 
 
 </body>
-
+@endsection
 </html>

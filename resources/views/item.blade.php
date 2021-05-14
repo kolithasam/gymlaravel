@@ -129,7 +129,7 @@
         <div class="row">
 
         <div class="col-sm-3" ></div>
-    <div class="col-sm-6" style="background-color:lavenderblush;">  
+    <div class="col-sm-6" >  
 <figure>
                                         <img class="img-responsive full-width" src="/images/{{$item[0]->main_image}}" alt="Top workouts" style="height:500px " width="400px" />
                                     </figure>
@@ -137,14 +137,19 @@
 
 </label>    </div>
 
-    <div class="col-sm-3" style="background-color:lavender;"> <h1>Price:-Rs&nbsp;{{$item[0]->price}}</h1></div>
+    <div class="col-sm-3" > <h1>Price:-Rs&nbsp;{{$item[0]->price}}</h1><br>
+  
+    <center><button class="btn more" id="button" style="vertical-align:middle"><a href="/ordersupplement/{{$item[0]->item_id}}" style="color: white;">Buy</a></button></center>
+  
+  
+  </div>
 </div>
-
+<br><br><br>
 <div class="row">
-<div class="col-sm-9" style="background-color:lavenderblush;">        <label>{{$item[0]->description}}</label>  </div>
+<div class="col-sm-9" >        <label>{{$item[0]->description}}</label>  </div>
 
-<div class="col-sm-3" style="background-color:lavender;">
-<center><button class="btn more" id="button" style="vertical-align:middle"><a href="/ordersupplement/{{$item[0]->name}}" style="color: white;">Buy</a></button></center>
+<div class="col-sm-3" >
+
 
 
 </div>

@@ -85,7 +85,7 @@
         <div class="container">
             <div class="page-header">
                 <center>
-                    <h1 style="color:#E0C11E;">Suppliments and  Accessories</h1>
+                    <h1 style="color:#E0C11E;">Suppliments and Accessories</h1>
                 </center><br>
                 <ul class="breadcrumb" style="color:#adadad;">
                     <li><a href="/" style="color:#adadad;"><i class="fa fa-home"></i></a></li>
@@ -145,20 +145,20 @@
 
 
                         @foreach($items as $item)
-                            <tr>
-                                <td>
-                                    <figure>
-                                        <img class="img-responsive full-width" src="/images/{{$item->main_image}}" alt="Top workouts" style="height:160px " width="100px" />
-                                    </figure>
-                                </td>
-                                <td>
-                                    <h3>{{$item->name}}</h3>
-                                </td>
-                                <td>
-                                    <h3>{{$item->price}}</h3>
-                                    <center><button class="btn more" id="button" style="vertical-align:middle"><a href="/item/{{$item->item_id}}">View More</a></button></center>
-                                </td>
-                            </tr>
+                        <tr>
+                            <td>
+                                <figure>
+                                    <img class="img-responsive full-width" src="/images/{{$item->main_image}}" alt="Top workouts" style="height:160px " width="100px" />
+                                </figure>
+                            </td>
+                            <td>
+                                <h3>{{$item->name}}</h3>
+                            </td>
+                            <td>
+                                <h3>{{$item->price}}</h3>
+                                <center><button class="btn more" id="button" style="vertical-align:middle"><a href="/item/{{$item->item_id}}">View More</a></button></center>
+                            </td>
+                        </tr>
                         @endforeach
                     </table>
                     {{ $items->links() }}

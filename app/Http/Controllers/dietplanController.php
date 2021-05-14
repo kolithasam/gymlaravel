@@ -28,7 +28,7 @@ class dietplanController extends Controller
         
 
         $item->save();
-        return "okay";
+        return redirect("dietplanlist");
     }
      
 
@@ -46,8 +46,8 @@ return view('dietlist',['members'=>$data]);
 function delete($item_id)
 {
     $data=orderdiets::where('id_d',$item_id)->delete();
-    return redirect('itemedit');
-//DB::table('orderdiets')->where('id_d',$item_id)->delete();
+    return redirect('dietlist');
+
 
 }
 

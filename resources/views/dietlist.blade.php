@@ -51,9 +51,9 @@
 <td><b>{{$item['address']}}</b></td>
 <td><b>{{$item['payment']}}</b></td>
 
-<td><a href="diet/delete/{{$item->id_d}}" class="btn btn-success ">Delete</a></td>
+<td><a href="diet/delete/{{$item->id_d}}" class="btn btn-success ">Done</a></td>
 
-<td><a href="/edit/{{$item->id_d}}" class="btn btn-success ">Update</a></td>
+
 
 
 
